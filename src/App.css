@@ -1,0 +1,56 @@
+body {
+  background-color: #ffffff;
+}
+
+.App {
+  background-color: #ffffff;
+  min-height: 500px;
+  width: auto;
+  margin: 40px auto;
+}
+
+input {
+  background-color: white;
+  border: 1px solid #000000;
+  width: 75%;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: #000000;
+}
+
+input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+input::-moz-placeholder {
+  color: #000000;
+}
+
+input:-ms-input-placeholder {
+  color: #000000;
+}
+
+input::-ms-input-placeholder {
+  color: #000000;
+}
+
+input::placeholder {
+  color: #000000;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+
+button {
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bolder;
+}

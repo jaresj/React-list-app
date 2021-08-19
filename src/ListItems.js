@@ -17,14 +17,27 @@ function ListItems(props) {
             }}
           />
           <span>
-            <button type="btn" onClick={() => props.deleteItem(item.key)}>
+            <button
+              type="deleteBtn"
+              className="deleteBtn"
+              onClick={() => props.deleteItem(item.key)}
+            >
               Remove
             </button>
-            <button type="btn" onClick={() => props.moveLeft(item.key)}>
-              Left
+            <br />
+            <button
+              type="leftBtn"
+              className="leftBtn"
+              onClick={() => props.moveLeft(item.key)}
+            >
+              &#10140;
             </button>
-            <button type="btn" onClick={() => props.moveRight(item.key)}>
-              Right
+            <button
+              type="rightBtn"
+              className="rightBtn"
+              onClick={() => props.moveRight(item.key)}
+            >
+              &#10140;
             </button>
           </span>
         </p>

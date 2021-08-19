@@ -1,10 +1,12 @@
 .list {
+  display: inline-block;
   color: #000;
-  width: 300px;
+  width: 30%;
   height: 300px;
   background-color: #ffffff;
   border: 1px solid #000;
-  margin: 20px auto;
+  border-radius: 10px;
+  margin: 20px 5px;
 }
 
 .list p {
@@ -28,4 +30,10 @@
 
 .list p input:focus {
   outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

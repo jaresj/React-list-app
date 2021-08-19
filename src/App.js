@@ -21,6 +21,8 @@ class App extends React.Component {
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
     this.setUpdate = this.setUpdate.bind(this);
+    this.moveLeft = this.moveLeft.bind(this);
+    this.moveRight = this.moveRight.bind(this);
   }
   handleInput(e) {
     this.setState({
@@ -61,6 +63,38 @@ class App extends React.Component {
       items: items,
     });
   }
+
+  moveLeft(key) {
+    let items = this.state.items;
+    let newListItems = [...items];
+    let selectedItem = newListItems.filter((item) => item.key === key)[0];
+    let indexOfSelectedItem = newListItems.indexOf(selectedItem);
+    let cardsAfter = newListItems.splice(indexOfSelectedItem + 1);
+    let cardBefore = newListItems.splice(indexOfSelectedItem - 1, 1);
+    newListItems.push(...cardBefore);
+    newListItems.push(...cardsAfter);
+    this.setState({
+      items: newListItems,
+    });
+  }
+
+  moveRight(key) {
+    let items = this.state.items;
+    let newListItems = [...items];
+    let selectedItem = newListItems.filter((item) => item.key === key)[0];
+    let indexOfSelectedItem = newListItems.indexOf(selectedItem);
+    let cardAfter = newListItems.splice(indexOfSelectedItem + 1, 1);
+    let cardsAfter = newListItems.splice(indexOfSelectedItem + 1);
+    let selectedCard = newListItems.splice(indexOfSelectedItem, 1);
+    console.log(cardsAfter);
+
+    newListItems.push(...cardAfter);
+    newListItems.push(...selectedCard);
+    newListItems.push(...cardsAfter);
+    this.setState({
+      items: newListItems,
+    });
+  }
   render() {
     return (
       <div className="App">
@@ -80,6 +114,8 @@ class App extends React.Component {
           items={this.state.items}
           deleteItem={this.deleteItem}
           setUpdate={this.setUpdate}
+          moveLeft={this.moveLeft}
+          moveRight={this.moveRight}
         />
       </div>
     );

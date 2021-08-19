@@ -20,6 +20,12 @@ function ListItems(props) {
             <button type="btn" onClick={() => props.deleteItem(item.key)}>
               Remove
             </button>
+            <button type="btn" onClick={() => props.moveLeft(item.key)}>
+              Left
+            </button>
+            <button type="btn" onClick={() => props.moveRight(item.key)}>
+              Right
+            </button>
           </span>
         </p>
       </div>

@@ -2,7 +2,7 @@
   "name": "listapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jaresj.github.io/list-app",
+  "homepage": "https://jaresj.github.io/React-list-app",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
